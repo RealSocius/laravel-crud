@@ -36,7 +36,7 @@ class CrudGeneratorService
             CrudGeneratorService::GetStubs('Controller')
         );
 
-        file_put_contents(app_path("/Http/Controllers/{$name}Controller.php"), $template);
+        file_put_contents(app_path("/Http/Controllers/{$name}sController.php"), $template);
     }
 
     /**
@@ -51,7 +51,7 @@ class CrudGeneratorService
             CrudGeneratorService::GetStubs('Model')
         );
 
-        file_put_contents(app_path("/{$name}.php"), $template);
+        file_put_contents(app_path("/Models/{$name}.php"), $template);
     }
 
     /**

@@ -1,29 +1,34 @@
 # Laravel CRUD Generator
 
-A simple Laravel 5 library that allows you to create crud operations with a single command
+A simple Laravel 8 library that allows you to create crud operations with a single command
+All of the code was copied from salmanzafar949/Laravel-Crud-Generator and updated to Laravel 8 standards.
 
 ## Installation
+
 ```
 composer require salmanzafar/laravel-crud-generator
 ```
+
 ## Features
 
-* Controller (with all the code already written)
-* Model
-* Migration
-* Requests
-* Routes
+- Controller (with all the code already written)
+- Model
+- Migration
+- Requests
+- Routes
 
 ## Enable the package (Optional)
+
 This package implements Laravel auto-discovery feature. After you install it the package provider and facade are added automatically for laravel >= 5.5.
 
 ## Configuration
+
 Publish the configuration file
 
 This step is required
 
 ```
-php artisan vendor:publish --provider="Salman\CrudGenerator\CrudGeneratorServiceProvider"
+php artisan vendor:publish --provider="Realsocius\CrudGenerator\CrudGeneratorServiceProvider"
 ```
 
 ## Usage
@@ -41,7 +46,9 @@ Just it, Now all of your `Model Controller, Migration, routes` and `Request` wil
 ```angular2
 php artisan crud:generate Car
 ```
+
 #### CarController.php
+
 ```angular2
 <?php
 
@@ -91,6 +98,7 @@ class CarController extends Controller
 ```
 
 #### Car.php
+
 ```angular2
 <?php
 
@@ -105,6 +113,7 @@ class Car extends Model
 ```
 
 #### CarRequest.php
+
 ```angular2
 <?php
 
@@ -127,6 +136,7 @@ class CarRequest extends FormRequest
 ```
 
 #### cars table migration
+
 ```angular2
 <?php
 
@@ -159,15 +169,16 @@ class CreateCarsTable extends Migration
         Schema::dropIfExists('cars');
     }
 }
-``` 
+```
 
 #### Routes/api.php
+
 ```angular2
-Route::apiResource('cars', 'CarController'); 
+Route::apiResource('cars', 'CarController');
 ```
 
 ##### Now all of your basic apis are ready to use you can use them directly by just adding fields in your table
 
 ### Tested on php 7.3 and laravel 5.7 and also laravel 5.8
 
-### Currently this package supports only CRUD operation for api's 
+### Currently this package supports only CRUD operation for api's
