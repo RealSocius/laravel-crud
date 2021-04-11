@@ -6,7 +6,7 @@ All of the code was copied from salmanzafar949/Laravel-Crud-Generator and update
 ## Installation
 
 ```
-composer require salmanzafar/laravel-crud-generator
+composer require realsocius/api-crud-generator
 ```
 
 ## Features
